@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <LULU msg="Hello Vue 3.0 + Vite" />
+  <div>
+    导航栏| <router-link to="/">LULU</router-link>|
+    <router-link to="/xxx">LULU2</router-link>
+  </div>
+  <hr />
+  <router-view />
 </template>
 
 <script>
-import LULU from "./components/LULU.vue";
-
 export default {
   name: "App",
-  components: {
-    LULU,
-  },
 };
 </script>
