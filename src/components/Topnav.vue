@@ -1,34 +1,39 @@
 <template>
   <div>
     <div class="topnav">
-      <div class="log" @click="toggleMenu">LOGO</div>
+      <div class="toggleAside" @click="toggleAside"></div>
+      <div class="logo">LOGO</div>
       <ul class="menu">
         <li>菜单1</li>
         <li>菜单2</li>
       </ul>
     </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { inject, Ref } from 'vue'
+import { inject, Ref } from "vue";
 export default {
-  
-  setup(){
-    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
-    const toggleMenu = ()=>{
-      menuVisible.value = !menuVisible.value
-    }
-    return {toggleMenu}
-  } 
-}
+  setup() {
+    const asideVisible = inject<Ref<boolean>>("asideVisible"); // get
+    const toggleAside = () => {
+      asideVisible.value = !asideVisible.value;
+    };
+    return { toggleAside };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
+  background: #ffffff;
+  border-bottom: 1px solid #d8e3ee;
+  color: #3d4c66;
+  font-weight: bold;
   display: flex;
   padding: 16px;
   position: relative;
+  height: 72px;
   z-index: 10;
   > .logo {
     max-width: 6em;
@@ -40,6 +45,39 @@ export default {
     flex-wrap: nowrap;
     > li {
       margin: 0 1em;
+    }
+  }
+  > .toggleAside {
+    &::before {
+      top: 24px;
+    }
+    &::after {
+      bottom: 28px;
+    }
+    &:before,
+    &:after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: #3d4c66;
+      display: none;
+      position: absolute;
+      left: 10px;
+      transition-duration: 0.5s;
+    }
+  }
+  @media (max-width: 500px) {
+    > .menu {
+      display: none;
+    }
+    > .logo {
+      margin: 0 auto;
+    }
+    > .toggleAside {
+      &::before,
+      &::after {
+        display: block;
+      }
     }
   }
 }

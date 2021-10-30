@@ -2,11 +2,11 @@
   <div>
     <topnav />
     <div class="content">
-      <aside v-if="menuVisible">
+      <aside v-if="asideVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/swich">Switch 组件</router-link>
+            <router-link to="/doc/switch">Switch 组件</router-link>
           </li>
           <li>
             <router-link to="/doc/button">Button 组件</router-link>
@@ -19,7 +19,9 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -29,27 +31,34 @@ import { inject, Ref } from "vue";
 export default {
   components: { Topnav },
   setup() {
-    const menuVisible = inject<Ref<boolean>>("menuVisible"); // get
-    return { menuVisible };
+    const asideVisible = inject<Ref<boolean>>("asideVisible"); // get
+    return { asideVisible };
   },
 };
 </script>
 <style lang="scss" scoped>
 aside {
-  background: lightblue;
+  background: #d8e3ee;
   width: 150px;
   padding: 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 70px;
+
   > h2 {
     margin-bottom: 4px;
   }
   > ol {
     > li {
-      padding: 4px 0;
+      padding: 8px;
+      height: 44px;
+      color: #2a3b4c;
+      font-weight: 700;
+      line-height: 44px;
     }
+  }
+  @media (max-width: 500px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 98px;
   }
 }
 </style>
