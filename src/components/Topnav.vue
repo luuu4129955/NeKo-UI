@@ -17,6 +17,8 @@ export default {
   setup() {
     const asideVisible = inject<Ref<boolean>>("asideVisible"); // get
     const toggleAside = () => {
+      console.log("点击了切换");
+      console.log(`值变为：${asideVisible.value}`);
       asideVisible.value = !asideVisible.value;
     };
     return { toggleAside };
@@ -26,15 +28,18 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-  background: #ffffff;
+  background: pink;
   border-bottom: 1px solid #d8e3ee;
   color: #3d4c66;
   font-weight: bold;
+  padding: 32px;
+  position: fixed;
   display: flex;
-  padding: 16px;
-  position: relative;
+  width: 100vw;
   height: 72px;
   z-index: 10;
+  justify-content: center;
+  align-items: center;
   > .logo {
     max-width: 6em;
     margin-right: auto;

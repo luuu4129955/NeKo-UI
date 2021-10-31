@@ -24,18 +24,30 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: lightgreen;
+  color: #2a3b4c;
+  background: linear-gradient(
+    to bottom right,
+    #f97a87,
+    #fa9ca6,
+    #edb4c3,
+    #b1bbd7,
+    #8cbad9,
+    #07b6d9
+  );
   > .actions {
-    padding: 8px 0;
+    padding: 20px 0;
     a {
       margin: 0 8px;
       background: #fff;
+      border: 2px #2a3b4c solid;
+      color: #2a3b4c;
+      font-weight: 700;
       display: inline-block;
-      $h: 28px;
+      $h: 44px;
       height: $h;
       line-height: $h;
-      border-radius: $h/2;
-      padding: 0 8px;
+      border-radius: $h/4;
+      padding: 0 22px;
     }
   }
 }

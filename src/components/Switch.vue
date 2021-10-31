@@ -1,3 +1,43 @@
 <template>
   <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
+  <div>switch</div>
 </template>
+
+<style lang="ts"></style>
