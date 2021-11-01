@@ -93,7 +93,7 @@ export default {
   > .content {
     flex-grow: 1;
     padding-top: 73px;
-    padding-left: 202px;
+    padding-left: 262px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -106,13 +106,14 @@ export default {
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
-    background: lightgreen;
+    padding: 60px 180px 60px 120px;
+    overflow: auto;
+    background: rgba(224, 255, 224, 0.5);
   }
 }
 aside {
-  background: #d8e3ee;
-  width: 200px;
+  background: #eaf4ff;
+  width: 260px;
   padding: 16px;
   position: fixed;
   top: 73px;
@@ -134,8 +135,5 @@ aside {
       color: red;
     }
   }
-}
-main {
-  overflow: auto;
 }
 </style>
