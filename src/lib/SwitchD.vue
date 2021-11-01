@@ -19,6 +19,9 @@ export default {
 $h: 22px;
 $h2: $h -4px;
 button {
+  &:focus {
+    outline: none; //去掉button外面那个框
+  }
   border: none;
   background-color: grey;
   width: $h * 2;
@@ -33,6 +36,7 @@ button {
     height: 18px;
     background-color: #fff;
     border-radius: 9px;
+    transition: left 250ms;
   }
   &.checked {
     background-color: blue;
