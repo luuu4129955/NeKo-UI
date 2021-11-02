@@ -1,7 +1,9 @@
 <template>
-  <div>button 示例</div>
+  <div>ButtonD 示例</div>
   <div>
-    <button>你好</button>
+    <ButtonD @click="onClick" @focus="onClick" @mouseover="onClick"
+      >你好</ButtonD
+    >
   </div>
 </template>
 
@@ -9,5 +11,11 @@
 import ButtonD from "../lib/ButtonD.vue";
 export default {
   components: { ButtonD },
+  setup() {
+    const onClick = () => {
+      console.log("hi");
+    };
+    return { onClick };
+  },
 };
 </script>
