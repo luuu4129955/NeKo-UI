@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SwitchD v-model:value="y" />
+    <SwitchD v-model:value="bool" />
   </div>
 </template>
 
@@ -10,8 +10,8 @@ import SwitchD from "../lib/SwitchD.vue";
 export default {
   components: { SwitchD },
   setup() {
-    const y = ref(true);
-    return { y };
+    const bool = ref(true);
+    return { bool };
   },
 };
 </script>
