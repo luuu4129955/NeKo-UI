@@ -1,5 +1,9 @@
 <template>
-  <button @click="toggle" :class="{ checked: value }">
+  <button
+    class="neko-switch"
+    @click="toggle"
+    :class="{ 'neko-checked': value }"
+  >
     <span></span>
   </button>
   <div class="text">{{ value }}</div>
@@ -25,7 +29,7 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h2: $h -4px;
-button {
+.neko-switch {
   &:focus {
     outline: none; //去掉button外面那个框
   }
@@ -45,10 +49,10 @@ button {
     border-radius: 9px;
     transition: left 250ms;
   }
-  &.checked {
-    background-color: blue;
-  }
-  &.checked > span {
+}
+.neko-checked {
+  background-color: blue;
+  > span {
     left: calc(100% - 20px);
   }
 }
