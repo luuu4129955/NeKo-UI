@@ -1,3 +1,16 @@
 <template>
-  <div>tabs 组件</div>
+  <div>Tabs示例</div>
+  <TabsD>
+    <TabD title="导航1">内容1</TabD>
+    <TabD title="导航2">内容2</TabD>
+  </TabsD>
 </template>
+
+<script lang="ts">
+import TabsD from "../lib/TabsD.vue";
+import TabD from "../lib/TabD.vue";
+
+export default {
+  components: { TabsD, TabD },
+};
+</script>
