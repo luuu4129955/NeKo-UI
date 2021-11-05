@@ -1,9 +1,11 @@
 <template>
   <template v-if="visible">
-    <div class="neko-dialog-overlay"></div>
+    <div class="neko-dialog-overlay" @click="onClickOverlay"></div>
     <div class="neko-dialog-wrapper">
       <div class="neko-dialog">
-        <header>标题 <span class="neko-dialog-close"></span></header>
+        <header>
+          标题 <span @click="close" class="neko-dialog-close"></span>
+        </header>
         <main>
           <p>第一行字</p>
           <p>第二行字</p>
@@ -26,6 +28,37 @@ export default {
       type: Boolean,
       default: false,
     },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true,
+    },
+    ok: {
+      type: Function,
+    },
+    cancel: {
+      type: Function,
+    },
+  },
+  setup(props, context) {
+    const close = () => {
+      context.emit("update:visible", false);
+    };
+    const onClickOverlay = () => {
+      if (props.closeOnClickOverlay) {
+        close();
+      }
+    };
+    const ok = () => {
+      //   if (props.ok && props.ok() !== false) {
+      if (props.ok?.() !== false) {
+        close();
+      }
+    };
+    const cancel = () => {
+      context.emit("cancel");
+      close();
+    };
+    return { close, onClickOverlay, ok, cancel };
   },
 };
 </script>
