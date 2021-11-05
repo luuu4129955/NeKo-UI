@@ -6,7 +6,10 @@
     :closeOnClickOverlay="false"
     :ok="f1"
     :cancel="f2"
-  ></DialogD>
+  >
+    <div>h1</div>
+    <div>h2</div>
+  </DialogD>
 </template>
 
 <script lang="ts">

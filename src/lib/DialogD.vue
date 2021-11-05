@@ -4,11 +4,10 @@
     <div class="neko-dialog-wrapper">
       <div class="neko-dialog">
         <header>
-          标题 <span @click="close" class="neko-dialog-close"></span>
+          {{ title }}<span @click="close" class="neko-dialog-close"></span>
         </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot />
         </main>
         <footer>
           <ButtonD level="main" @click="ok">OK</ButtonD>
@@ -24,6 +23,10 @@ import ButtonD from "./ButtonD.vue";
 export default {
   components: { ButtonD },
   props: {
+    title: {
+      type: String,
+      default: "提示",
+    },
     visible: {
       type: Boolean,
       default: false,
