@@ -11,8 +11,8 @@
           <p>第二行字</p>
         </main>
         <footer>
-          <ButtonD level="main">OK</ButtonD>
-          <ButtonD>Cancel</ButtonD>
+          <ButtonD level="main" @click="ok">OK</ButtonD>
+          <ButtonD @click="cancel">Cancel</ButtonD>
         </footer>
       </div>
     </div>
