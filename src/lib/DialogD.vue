@@ -1,20 +1,22 @@
 <template>
   <template v-if="visible">
-    <div class="neko-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="neko-dialog-wrapper">
-      <div class="neko-dialog">
-        <header>
-          {{ title }}<span @click="close" class="neko-dialog-close"></span>
-        </header>
-        <main>
-          <slot />
-        </main>
-        <footer>
-          <ButtonD level="main" @click="ok">OK</ButtonD>
-          <ButtonD @click="cancel">Cancel</ButtonD>
-        </footer>
+    <Teleport to="body">
+      <div class="neko-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="neko-dialog-wrapper">
+        <div class="neko-dialog">
+          <header>
+            {{ title }}<span @click="close" class="neko-dialog-close"></span>
+          </header>
+          <main>
+            <slot />
+          </main>
+          <footer>
+            <ButtonD level="main" @click="ok">OK</ButtonD>
+            <ButtonD @click="cancel">Cancel</ButtonD>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
