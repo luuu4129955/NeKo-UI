@@ -1,6 +1,6 @@
 <template>
   <div>Tabs示例</div>
-  <TabsD v-model:selected="x">
+  <TabsD v-model:selected="isSelected">
     <TabD title="导航1">内容1</TabD>
     <TabD title="导航2">内容2</TabD>
   </TabsD>
@@ -13,8 +13,8 @@ import { ref } from "vue";
 export default {
   components: { TabsD, TabD },
   setup() {
-    const x = ref("导航1");
-    return { x };
+    const isSelected = ref("导航1");
+    return { isSelected };
   },
 };
 </script>

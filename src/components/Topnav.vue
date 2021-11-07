@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
+  background: rgb(220, 255, 206);
   border-bottom: 1px solid #d8e3ee;
   color: #3d4c66;
   font-weight: bold;

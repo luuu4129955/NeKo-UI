@@ -112,14 +112,14 @@ export default {
   }
 }
 aside {
-  background: #eaf4ff;
+  background: #caebaf;
   width: 260px;
   padding: 16px;
   position: fixed;
   top: 73px;
   left: 0;
   height: 100vh;
-  overflow: auto;
+  overflow: scroll;
   > h2 {
     margin-bottom: 4px;
   }
