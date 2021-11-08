@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="topnavAndBanner">
     <Topnav />
     <div class="banner">
       <h1>NeKo-UI</h1>
-      <h2>一个厉害的UI框架</h2>
+      <h3>一个厉害的UI框架</h3>
       <p class="actions">
         <a href="https://github.com/luuu4129955/NeKo-UI">GitHub</a>
         <router-link to="/doc">开始</router-link>
@@ -18,13 +18,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.banner {
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #2a3b4c;
+.topnavAndBanner {
   background: linear-gradient(
     to bottom right,
     #f97a87,
@@ -34,6 +28,15 @@ export default {
     #8cbad9,
     #07b6d9
   );
+}
+.banner {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #2a3b4c;
+
   > .actions {
     padding: 20px 0;
     a {

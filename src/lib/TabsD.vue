@@ -50,7 +50,9 @@ export default {
       indicator.value.style.left = left + "px";
     };
 
-    watchEffect(x); //onMounted(x);第一次 + onUpdated(x)后面的;
+    onMounted(() => {
+      watchEffect(x);
+    });
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
       if (tag.type !== TabD) {
