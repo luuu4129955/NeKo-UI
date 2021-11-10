@@ -1,67 +1,28 @@
 <template>
   <div class="layout">
-    <Topnav class="nav" />
+    <Topnav toggleMenuButtonVisible class="nav" />
     <div class="content">
       <!-- <aside v-show="asideVisible"> -->
       <aside>
-        <h2>组件列表</h2>
+        <span>开发指南</span>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/button">Button 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/switch">介绍</router-link>
           </li>
         </ol>
-        <h2>组件列表</h2>
+        <span>组件列表</span>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            <router-link to="/doc/switch">Switch 开关</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            <router-link to="/doc/button">Button 按钮</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">Dialog 弹出框</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
-          </li>
-        </ol>
-        <h2>组件列表</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/button">Button 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
-          </li>
-        </ol>
-        <h2>组件列表</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/button">Button 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/tabs">Tabs 标签</router-link>
           </li>
         </ol>
       </aside>
@@ -84,16 +45,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .layout {
+  // background-color: #f6f7f9;
+  background: linear-gradient(to bottom right, #fa9ca6, #8cbad9);
   display: flex;
   flex-direction: column;
   height: 100vh;
-  > .nav {
-    flex-shrink: 0;
-  }
+
   > .content {
     flex-grow: 1;
-    padding-top: 73px;
-    padding-left: 262px;
+    padding: 73px 18px 0 280px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
@@ -108,28 +68,32 @@ export default {
     flex-grow: 1;
     padding: 60px 180px 60px 120px;
     overflow: auto;
-    background: rgba(224, 255, 224, 0.5);
+    border-radius: 30px;
+    background: #fff;
   }
 }
 aside {
-  background: #caebaf;
+  color: #455a64;
+  border-radius: 30px;
+  background: #fff;
   width: 260px;
-  padding: 16px;
+  padding: 60px 16px 16px 36px;
   position: fixed;
   top: 73px;
   left: 0;
-  height: 100vh;
-  overflow: scroll;
-  > h2 {
-    margin-bottom: 4px;
+  min-height: 100vh;
+  > span {
+    font-size: 18px;
+    font-weight: 700;
   }
   > ol {
     > li {
-      padding: 8px;
+      font-size: 14px;
+      padding: 8px 0;
       height: 44px;
       color: #2a3b4c;
-      font-weight: 700;
-      line-height: 44px;
+      border: hotpink 1px solid;
+      line-height: 28px;
     }
     > li:hover {
       color: red;
