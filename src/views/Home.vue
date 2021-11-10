@@ -89,6 +89,7 @@ export default {
       $h: 44px;
       font-weight: 700;
       display: inline-block;
+      text-decoration: underline;
 
       // height: $h;
       // line-height: $h;

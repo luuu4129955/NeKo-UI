@@ -7,7 +7,10 @@
         <span>开发指南</span>
         <ol>
           <li>
-            <router-link to="/doc/switch">介绍</router-link>
+            <router-link to="/doc/install">安装</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/get-started">开始使用</router-link>
           </li>
         </ol>
         <span>组件列表</span>
@@ -68,13 +71,13 @@ export default {
     flex-grow: 1;
     padding: 60px 180px 60px 120px;
     overflow: auto;
-    border-radius: 30px;
+    border-radius: 24px;
     background: #fff;
   }
 }
 aside {
   color: #455a64;
-  border-radius: 30px;
+  border-radius: 24px;
   background: #fff;
   width: 260px;
   padding: 60px 16px 16px 36px;
@@ -92,11 +95,18 @@ aside {
       padding: 8px 0;
       height: 44px;
       color: #2a3b4c;
-      border: hotpink 1px solid;
-      line-height: 28px;
+      // border: hotpink 1px solid;
+      line-height: 32px;
+      > .router-link-active {
+        display: block;
+        background: #ecd3da;
+        padding: 2px 10px;
+        border-radius: 20px;
+        color: #fa9ca6;
+      }
     }
     > li:hover {
-      color: red;
+      color: #fa9ca6;
     }
   }
 }
